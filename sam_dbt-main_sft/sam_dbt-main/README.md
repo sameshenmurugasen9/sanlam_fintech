@@ -88,6 +88,8 @@ The data flows in one direction, ensuring a Directed Acyclic Graph (DAG) and mak
 
 ### Core Commands
 
+## PLEASE NOTE THAT THIS CODE WAS NOT RUN LIVE IN DBT AS THERE WAS NO DATA PROVIDED. I WOULD HAVE LOADED THE DATA ONTO SNOWFLAKE MANUALLY INTO SEPERATE 'SOURCE' DBS AND RAN IT OTHERWISE.
+
 * **Build & Test Everything:**
     ```bash
     dbt build
@@ -114,4 +116,5 @@ The data flows in one direction, ensuring a Directed Acyclic Graph (DAG) and mak
     dbt docs generate
     ```
     Then, click the "View Documentation" book icon in dbt Cloud to see the full project documentation and lineage graph.
+
 
