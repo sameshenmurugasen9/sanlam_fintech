@@ -1,0 +1,7 @@
+version: 2
+models:
+- name: bronze_meta_basic_ad_actions
+  columns:
+  - name: ad_id
+    data_tests:
+    - not_null

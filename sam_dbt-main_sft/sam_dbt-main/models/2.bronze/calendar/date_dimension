@@ -1,0 +1,23 @@
+{{
+  config(
+    alias = date_dimension,
+    materialized = 'table'
+}}
+
+with date_spine as (
+    select 
+        to_char(date_day, 'YYYYMMDD') as date_id,
+        date_day,
+        left(to_char(date_day, 'YYYYMMDD'), 6) as year_month,
+        date_part(week, date_day) as week_number,
+        date_part(month, date_day) as month_number,
+        date_part(year, date_day) as year_number
+    from (
+        select dateadd(day, seq4(), to_date('2024-01-01')) as date_day
+        from table(generator(rowcount => 730))
+        where date_day <= current_date()
+    )
+)
+
+select *
+from date_spine
