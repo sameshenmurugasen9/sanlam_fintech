@@ -4,6 +4,12 @@ This dbt project provides a scalable, testable, and maintainable data pipeline f
 
 Its primary purpose is to refactor the logic from a single monolithic SQL script (`campaignstats_cte.sql`) into a modular data architecture. This new structure solves for maintainability, reusability, and data quality.
 
+Conceptual Data Model (Part 1)
+
+This project is built on a scalable, normalized Star Schema.
+<img width="1786" height="723" alt="image" src="https://github.com/user-attachments/assets/834fe4f3-7e7a-41a7-abb3-3e44f52e7a20" />
+
+
 ## 📈 Project Architecture: The Medallion Model
 
 This project follows a **Bronze, Silver, Gold** (Medallion) architecture. Each layer serves a distinct purpose, transforming raw data into analytics-ready assets.
@@ -108,3 +114,4 @@ The data flows in one direction, ensuring a Directed Acyclic Graph (DAG) and mak
     dbt docs generate
     ```
     Then, click the "View Documentation" book icon in dbt Cloud to see the full project documentation and lineage graph.
+
